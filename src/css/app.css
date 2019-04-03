@@ -1,0 +1,74 @@
+/* Base Style */
+/*  Reset Style */
+* {
+  padding: 0;
+  margin: 0 auto; }
+
+/* Layouts Style */
+/*  Flexbox Layouts */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+
+/* Components Style */
+/*  Button Style */
+.button {
+  -ms-flex-item-align: center;
+  align-self: center;
+  width: 90px;
+  height: auto;
+  position: relative; }
+  .button input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden; }
+  .button label {
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    border-radius: 200px;
+    background: #cecece;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: background .3s, left .3s;
+    -o-transition: background .3s, left .3s;
+    transition: background .3s, left .3s; }
+    .button label:after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: white;
+      left: 5px;
+      top: 5px;
+      -webkit-box-shadow: 2px 0px 4px 0px #9c9c9cc7;
+      box-shadow: 2px 0px 4px 0px #9c9c9cc7;
+      -webkit-transition: background .3s, left .3s;
+      -o-transition: background .3s, left .3s;
+      transition: background .3s, left .3s; }
+  .button input[type="checkbox"]:checked + label {
+    background: #1a2135; }
+    .button input[type="checkbox"]:checked + label:after {
+      background: #1b7db3;
+      left: calc(100% - 35px);
+      -webkit-box-shadow: -4px 0px 4px 0px #0c0c0c29;
+      box-shadow: -4px 0px 4px 0px #0c0c0c29; }
+
+/* Animation */
+/* Transition to Dark */
+.transitionWindow {
+  -webkit-transition: background .5s;
+  -o-transition: background .5s;
+  transition: background .5s; }
+
+/* from Ligt to Dark */
+html[theme="dark"] {
+  background: #071923; }
